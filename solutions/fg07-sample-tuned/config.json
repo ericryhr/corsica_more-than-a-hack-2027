@@ -1,0 +1,53 @@
+{
+  "game": "BAR-ATH",
+  "settings": ["blurred", "harsh-blurred"],
+  "grids": {
+    "baseline": {"window": [0, 25, 50, 125, 250]},
+    "drift": {"gain": [0, 1], "drift_frames": [null, 50, 125], "max_gap": [null, 250, 500, 1000],
+              "window": [50, 125, 250]},
+    "rules": {"switch_cost": [25, 50, 100], "dead_gap": [5, 10, 15, 25, 50],
+              "ball_radius": [null, 2.0, 3.0, 4.0, 6.0], "far_weight": [0.1, 0.3, 0.6],
+              "out_margin": [null, 0.0]}
+  },
+  "rules_fixed": {"source": "ball", "smoother": "viterbi"},
+  "tags_prior": {"source": "fuse", "weights": "phases", "tag_weight": 1.0, "goals_dead": true},
+  "linear": {
+    "windows": [[-100, -25], [-25, 25], [25, 100]],
+    "l2": 10.0,
+    "stride": 3,
+    "owner": ["wid_diff", "wid_home", "wid_away", "len_diff", "len_home", "len_away", "cx_mean",
+              "cx_diff", "vx_mean", "vx_home", "vx_away", "spd_diff", "near_team", "d_diff",
+              "top3_home", "n5_diff", "n10_diff", "near_team_r1", "near_team_r3", "d_diff_r1",
+              "top3_home_r1", "touch_diff", "ball_x", "ball_vx", "ball_out", "ball_seen"],
+    "dead": ["spd_home", "spd_away", "near_speed", "ball_seen", "ball_gap_s", "ball_speed",
+             "ball_accel", "ball_turn", "ball_out", "ball_edge", "ball_y_abs", "wid_home",
+             "wid_away", "len_home", "len_away", "cx_mean", "cx_diff", "n_home", "n_away",
+             "vx_home", "vx_away", "near_dist", "n5_total", "touch_any"],
+    "network_owner": ["open_frac_diff", "margin_diff", "open_frac_proj_diff", "margin_proj_diff",
+                      "carrier_open_diff", "carrier_frac_diff", "carrier_press_diff",
+                      "goal_side_diff", "mark_dist_diff", "follow_diff", "cover_gain_diff"],
+    "costs": {"team": [5, 10, 25, 50, 100, 200, 400], "dead": [50, 100, 200, 500, 1000]}
+  },
+  "netfuse": {
+    "features": ["open_frac", "margin", "open_frac_proj", "margin_proj", "carrier_open",
+                 "carrier_frac", "carrier_press", "goal_side", "mark_dist", "follow", "cover_gain"],
+    "smooth_seconds": 1.0,
+    "l2": 1.0,
+    "clip": 3.0,
+    "weight": [0.0, 0.05, 0.1, 0.25, 0.5, 1.0],
+    "switch_cost": [25, 50, 100, 200]
+  },
+  "network": {
+    "max_slots": 16,
+    "lane_min": 3.0,
+    "lane_max": 40.0,
+    "reach": 1.0,
+    "cone": 0.3,
+    "tau": 0.6,
+    "velocity_step": 5,
+    "max_speed": 12.0,
+    "follow_lag": 0.6,
+    "moving_speed": 1.0,
+    "chunk": 2000
+  }
+}

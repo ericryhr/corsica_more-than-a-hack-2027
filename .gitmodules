@@ -1,0 +1,6 @@
+[submodule "repo/more-than-a-hack-2027"]
+	path = repo/more-than-a-hack-2027
+	url = https://github.com/metrica-sports/more-than-a-hack-2027.git
+[submodule "repo/sample-data"]
+	path = repo/sample-data
+	url = https://github.com/metrica-sports/sample-data.git

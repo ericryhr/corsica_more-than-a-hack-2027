@@ -1,0 +1,10 @@
+{
+  "game": "BAR-ATH",
+  "base_submission": "submissions/er03-windowed-viterbi-dead02-controlled.csv",
+  "center_radius_m": 1.5,
+  "min_dead_frames": 500,
+  "kickoff_hold_frames": 35,
+  "opening_window_frames": 11300,
+  "outside_margin": 0.0,
+  "outside_min_frames": 25
+}

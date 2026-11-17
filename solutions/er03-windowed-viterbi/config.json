@@ -1,0 +1,26 @@
+{
+  "game": "BAR-ATH",
+  "seed": 0,
+  "settings": ["blurred", "harsh-blurred"],
+  "windows": [[-100, -25], [-25, 25], [25, 100]],
+  "l2": 10.0,
+  "stride": 3,
+  "owner_fg07": ["wid_diff", "wid_home", "wid_away", "len_diff", "len_home", "len_away", "cx_mean",
+                 "cx_diff", "vx_mean", "vx_home", "vx_away", "spd_diff", "near_team", "d_diff",
+                 "top3_home", "n5_diff", "n10_diff", "near_team_r1", "near_team_r3", "d_diff_r1",
+                 "top3_home_r1", "touch_diff", "ball_x", "ball_vx", "ball_out", "ball_seen"],
+  "dead_fg07": ["spd_home", "spd_away", "near_speed", "ball_seen", "ball_gap_s", "ball_speed",
+                "ball_accel", "ball_turn", "ball_out", "ball_edge", "ball_y_abs", "wid_home",
+                "wid_away", "len_home", "len_away", "cx_mean", "cx_diff", "n_home", "n_away",
+                "vx_home", "vx_away", "near_dist", "n5_total", "touch_any"],
+  "feature_sets": ["fg07", "full", "owner02", "dead02"],
+  "label_sets": ["bench", "controlled"],
+  "controlled_min_events": 2,
+  "controlled_min_seconds": 2.0,
+  "costs": {"team": [5, 10, 25, 50], "dead": [50, 100, 200, 500]},
+  "merge_control": {"threshold": 0.5, "min_dead": 25, "min_spells": [50, 75]},
+  "er02_cues": {
+    "cue_stride": 5, "min_players": 6, "motion_lag": 5, "lane_max_len": 30.0, "lane_min_len": 3.0,
+    "lane_radius": 2.0, "marking_cap": 30.0, "dead_lag": 5
+  }
+}

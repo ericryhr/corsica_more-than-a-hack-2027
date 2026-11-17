@@ -1,0 +1,45 @@
+{
+  "name": "er03-windowed-viterbi",
+  "description": "Windowed owner and dead-ball models (fg07 geometry + er02 cues and dead-ball features) with a 3-state Viterbi, trained leave-one-game-out on the shared Metrica bench with an ATD-like blurred ball; bench vs controlled-possession training labels",
+  "results": [
+    {
+      "submission": "er03-windowed-viterbi-dead02-controlled",
+      "gt": "public",
+      "window": "all",
+      "spell_f1_mean": 0.6323,
+      "macro_f1": 0.8567,
+      "n_pred_spells": 14,
+      "n_gt_spells": 17,
+      "accuracy": 0.8764,
+      "n_graded": 7500,
+      "n_abstain_on_graded": 0,
+      "date": "2026-11-12"
+    },
+    {
+      "submission": "er03-windowed-viterbi-fg07-bench",
+      "gt": "public",
+      "window": "all",
+      "spell_f1_mean": 0.5625,
+      "macro_f1": 0.8244,
+      "n_pred_spells": 15,
+      "n_gt_spells": 17,
+      "accuracy": 0.8596,
+      "n_graded": 7500,
+      "n_abstain_on_graded": 0,
+      "date": "2026-11-12"
+    },
+    {
+      "submission": "er03-windowed-viterbi-full-bench",
+      "gt": "public",
+      "window": "all",
+      "spell_f1_mean": 0.5697,
+      "macro_f1": 0.8517,
+      "n_pred_spells": 16,
+      "n_gt_spells": 17,
+      "accuracy": 0.8705,
+      "n_graded": 7500,
+      "n_abstain_on_graded": 0,
+      "date": "2026-11-12"
+    }
+  ]
+}

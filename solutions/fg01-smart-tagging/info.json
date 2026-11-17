@@ -1,0 +1,5 @@
+﻿{
+    "description":  "Possession from the ball-nearest team fused with Smart Tagging phases; rules compared on the hand-labelled window.",
+    "name":  "fg01-smart-tagging",
+    "note":  "Vendored as a code dependency of er03-windowed-viterbi, which reuses this solution\u0027s src/ through its src/peers.py. Not part of the presented pipeline on its own."
+}

@@ -1,0 +1,187 @@
+{
+  "game": "BAR-ATH",
+  "hand": {
+    "gt": "labels/fg_30_11175-56199.csv",
+    "windows": {
+      "hand30": [
+        11185,
+        56199
+      ],
+      "hand25": [
+        18685,
+        56199
+      ]
+    }
+  },
+  "variants": [
+    {
+      "name": "ball",
+      "source": "ball",
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50
+    },
+    {
+      "name": "tags-count",
+      "source": "tags",
+      "weights": "all",
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50
+    },
+    {
+      "name": "tags-phases",
+      "source": "tags",
+      "weights": "reliable",
+      "tag_max_age": 500,
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50
+    },
+    {
+      "name": "fallback",
+      "source": "fallback",
+      "weights": "reliable",
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50
+    },
+    {
+      "name": "fuse-count",
+      "source": "fuse",
+      "weights": "all",
+      "tag_weight": 1,
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50
+    },
+    {
+      "name": "fuse-phases",
+      "source": "fuse",
+      "weights": "reliable",
+      "tag_weight": 2,
+      "tag_max_age": 500,
+      "expire": 75,
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50
+    },
+    {
+      "source": "fuse",
+      "weights": "reliable",
+      "tag_weight": 2,
+      "tag_max_age": 500,
+      "expire": 75,
+      "smoother": "viterbi",
+      "switch_cost": 100,
+      "dead_gap": 50,
+      "goals_dead": true,
+      "dead_needs_no_tag": true,
+      "sp_restart": 125,
+      "sp_hold": 125,
+      "sp_weight": 3,
+      "ball_radius": null,
+      "far_weight": 1.0,
+      "out_margin": null,
+      "name": "fuse-phases-dead"
+    },
+    {
+      "source": "ball",
+      "weights": "reliable",
+      "tag_weight": 2,
+      "tag_max_age": 500,
+      "expire": 75,
+      "smoother": "viterbi",
+      "switch_cost": 50,
+      "dead_gap": 50,
+      "goals_dead": true,
+      "dead_needs_no_tag": true,
+      "sp_restart": 125,
+      "sp_hold": 125,
+      "sp_weight": 3,
+      "ball_radius": 2,
+      "far_weight": 0.3,
+      "out_margin": 0,
+      "name": "ball-dead"
+    },
+    {
+      "source": "fuse",
+      "weights": "reliable",
+      "tag_weight": 2,
+      "tag_max_age": 500,
+      "expire": 75,
+      "smoother": "viterbi",
+      "switch_cost": 50,
+      "dead_gap": 50,
+      "goals_dead": true,
+      "dead_needs_no_tag": true,
+      "sp_restart": 125,
+      "sp_hold": 125,
+      "sp_weight": 3,
+      "ball_radius": 2,
+      "far_weight": 0.3,
+      "out_margin": 0,
+      "name": "final"
+    }
+  ],
+  "search": [
+    {
+      "source": [
+        "fuse"
+      ],
+      "weights": [
+        "reliable"
+      ],
+      "tag_weight": [
+        2
+      ],
+      "tag_max_age": [
+        375,
+        500
+      ],
+      "expire": [
+        50,
+        75,
+        100
+      ],
+      "smoother": [
+        "viterbi"
+      ],
+      "switch_cost": [
+        40,
+        50,
+        60,
+        75
+      ],
+      "dead_gap": [
+        50
+      ],
+      "goals_dead": [
+        true
+      ],
+      "dead_needs_no_tag": [
+        true
+      ],
+      "sp_restart": [
+        125
+      ],
+      "sp_hold": [
+        125
+      ],
+      "sp_weight": [
+        3
+      ],
+      "ball_radius": [
+        1.5,
+        2,
+        2.5
+      ],
+      "far_weight": [
+        0.3
+      ],
+      "out_margin": [
+        0
+      ]
+    }
+  ]
+}

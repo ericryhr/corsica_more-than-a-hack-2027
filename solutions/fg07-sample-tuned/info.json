@@ -1,0 +1,5 @@
+﻿{
+    "description":  "fg01, fg03, fg04 and fg05 (and 00, 01) refitted for the new rules: every parameter tuned and every model trained on Metrica\u0027s three public sample games, degraded like the ATD, with leave-one-game-out estimates; Smart Tagging only with fixed prior constants",
+    "name":  "Sample-tuned methods",
+    "note":  "Vendored as a code dependency of er03-windowed-viterbi, which reuses this solution\u0027s src/ through its src/peers.py. Not part of the presented pipeline on its own."
+}

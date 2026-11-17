@@ -1,0 +1,17 @@
+# Match data and anything derived from it must never be committed (see RULES.md)
+data/
+repo/more-than-a-hack-2027/data/
+
+# Outputs and caches; the repository regenerates all of them
+artifacts/
+submissions/
+reports/
+
+# Hand labels of any game are not part of the presented pipeline
+labels/
+
+*.pyc
+__pycache__/
+.venv/
+.pytest_cache/
+.scratch/

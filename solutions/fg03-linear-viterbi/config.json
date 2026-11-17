@@ -1,0 +1,75 @@
+{
+  "game": "BAR-ATH",
+  "labels": {
+    "gt": "labels/fg_30_11175-56199.csv",
+    "window": [11185, 56199]
+  },
+  "folds": [
+    [11185, 18684],
+    [18685, 26187],
+    [26188, 33690],
+    [33691, 41193],
+    [41194, 48696],
+    [48697, 56199]
+  ],
+  "variants": [
+    {
+      "name": "core",
+      "owner": ["wid_diff", "fg01_ball", "vx_mean", "d_diff_r1", "ball_vx", "fg01_tag", "spd_diff",
+                "top3_home_r1"],
+      "dead": ["spd_away", "touch_any", "ball_speed", "wid_away", "tag_phase", "ball_gap_s",
+               "tag_any", "ball_turn"],
+      "windows": [[-100, -25], [-25, 25], [25, 100]],
+      "l2": 10.0,
+      "costs": {"team": 50, "dead": 50}
+    },
+    {
+      "name": "compact",
+      "owner": ["wid_diff", "fg01_ball", "vx_away", "ball_vx", "ball_out", "n10_diff",
+                "d_diff_r1", "tag_reliable", "ball_speed", "spd_home", "tag_set_piece",
+                "ball_y_abs"],
+      "dead": ["spd_away", "touch_any", "ball_speed", "tag_phase", "wid_away", "ball_turn",
+               "tag_any", "ball_gap_s", "cx_diff", "n_away", "len_home", "vx_home"],
+      "windows": [[-100, -25], [-25, 25], [25, 100]],
+      "l2": 10.0,
+      "costs": {"team": 15, "dead": 500}
+    },
+    {
+      "name": "geometry",
+      "owner": ["wid_diff", "wid_home", "wid_away", "len_diff", "len_home", "len_away", "cx_mean",
+                "cx_diff", "vx_mean", "vx_home", "vx_away", "spd_diff", "near_team", "d_diff",
+                "top3_home", "n5_diff", "n10_diff", "near_team_r1", "near_team_r3", "d_diff_r1",
+                "top3_home_r1", "fg01_ball", "touch_diff", "ball_x", "ball_vx", "ball_out",
+                "ball_seen"],
+      "dead": ["spd_home", "spd_away", "near_speed", "ball_seen", "ball_gap_s", "ball_speed",
+               "ball_accel", "ball_turn", "ball_out", "ball_edge", "ball_y_abs", "wid_home",
+               "wid_away", "len_home", "len_away", "cx_mean", "cx_diff", "n_home", "n_away",
+               "vx_home", "vx_away", "near_dist", "n5_total", "touch_any"],
+      "windows": [[-100, -25], [-25, 25], [25, 100]],
+      "l2": 10.0,
+      "costs": {"team": 25, "dead": 500}
+    },
+    {
+      "name": "full",
+      "owner": "all",
+      "dead": "all",
+      "windows": [[-100, -25], [-25, 25], [25, 100]],
+      "l2": 10.0,
+      "costs": {"team": 100, "dead": 200}
+    }
+  ],
+  "cv_windows": {
+    "hand30": [11185, 56199],
+    "hand25": [18685, 56199]
+  },
+  "cv_costs": {
+    "team": [5, 10, 15, 25, 50, 75, 100],
+    "dead": [50, 100, 200, 300, 500]
+  },
+  "select": {
+    "windows": [[-100, -25], [-25, 25], [25, 100]],
+    "steps": 12,
+    "stride": 5,
+    "l2": 10.0
+  }
+}

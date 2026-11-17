@@ -1,0 +1,20 @@
+{
+  "name": "ns03-kickoff-outside",
+  "description": "Improve top Viterbi model by adding center-serving kickoff rule (dead ball before strike, serving team possession after) and out-of-bounds dead ball filtering.",
+  "results": [
+    {
+      "submission": "ns03-kickoff-outside-combined-m0-f25",
+      "gt": "public",
+      "window": "all",
+      "spell_f1_mean": 0.6667,
+      "macro_f1": 0.862,
+      "n_pred_spells": 13,
+      "n_gt_spells": 17,
+      "accuracy": 0.8809,
+      "n_graded": 7500,
+      "n_abstain_on_graded": 0,
+      "date": "2026-11-13",
+      "note": "Public 5-minute window, used only as a pipeline correctness check (see the challenge's EVALUATION.md)."
+    }
+  ]
+}
