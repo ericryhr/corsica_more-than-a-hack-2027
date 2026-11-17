@@ -1,0 +1,5 @@
+﻿{
+    "description":  "Ball imputed by dragging its last known position with the mean displacement of all tracked players; same majority-vote windows as the baseline.",
+    "name":  "Ball drift imputation",
+    "note":  "Vendored as a code dependency of the presented pipeline (loaded through src/peers.py). Not part of the presented pipeline on its own."
+}

@@ -1,0 +1,5 @@
+﻿{
+    "description":  "Exploratory analysis: per-frame ball, player geometry and Smart Tagging features against the public and hand labels, with linear models and boundary-locked averages",
+    "name":  "Geometry EDA",
+    "note":  "Vendored as a code dependency of the presented pipeline (loaded through src/peers.py). Not part of the presented pipeline on its own."
+}

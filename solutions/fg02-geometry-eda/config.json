@@ -1,0 +1,88 @@
+{
+  "game": "BAR-ATH",
+  "seed": 0,
+  "hand": "labels/fg_30_11175-56199.csv",
+  "datasets": {
+    "public": {
+      "labels": "public",
+      "window": [
+        11185,
+        18684
+      ]
+    },
+    "hand25": {
+      "labels": "hand",
+      "window": [
+        18685,
+        56199
+      ]
+    },
+    "hand30": {
+      "labels": "hand",
+      "window": [
+        11185,
+        56199
+      ]
+    }
+  },
+  "model_splits": [
+    [
+      "hand25",
+      "public"
+    ],
+    [
+      "public",
+      "hand25"
+    ]
+  ],
+  "locked_half": 250,
+  "locked_level_span": 125,
+  "profile_offsets": [
+    -250,
+    -125,
+    -75,
+    -50,
+    -25,
+    -12,
+    0,
+    12,
+    25,
+    50,
+    75,
+    125,
+    250
+  ],
+  "profile_features": [
+    "near_team",
+    "near_team_r1",
+    "d_diff",
+    "top3_home",
+    "n5_diff",
+    "near_dist",
+    "ball_seen",
+    "ball_speed",
+    "ball_out",
+    "vx_mean",
+    "wid_diff",
+    "len_diff",
+    "cx_mean",
+    "spd_home",
+    "spd_away",
+    "tag_reliable",
+    "tag_phase",
+    "tag_set_piece"
+  ],
+  "lag_reach": 125,
+  "null_samples": 300,
+  "null_margin": 50,
+  "boundary_radius": 12,
+  "change_seconds": 0.5,
+  "l2": 1.0,
+  "pca_components": 6,
+  "kmeans_k": [
+    3,
+    6,
+    10
+  ],
+  "unsupervised_stride": 5
+}

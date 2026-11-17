@@ -1,0 +1,5 @@
+﻿{
+    "description":  "Official challenge baseline. The team of the player closest to the ball has possession, smoothed with a majority vote over a window of +/- w frames.",
+    "name":  "00-baseline",
+    "note":  "Vendored as a code dependency of the presented pipeline (loaded through src/peers.py). Not part of the presented pipeline on its own."
+}
