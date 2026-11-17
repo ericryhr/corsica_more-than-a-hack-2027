@@ -25,7 +25,8 @@ repo/sample-data/             Metrica's public sample games, a git submodule (tr
 shared/                       access to the challenge data and code, sample-game caching, bench and scorer
 solutions/er03-windowed-viterbi/   the base model (trains on the sample games)
 solutions/ns03-kickoff-outside/    the kickoff and out-of-bounds rules (the presented file)
-solutions/fg01, fg03, fg07, er02/  vendored code er03 reuses through src/peers.py
+solutions/fg01, fg02, fg03, fg07, er02, 00-baseline, 01-ball-drift/
+                                   vendored code the base model reuses through src/peers.py
 ```
 
 ## Requirements
