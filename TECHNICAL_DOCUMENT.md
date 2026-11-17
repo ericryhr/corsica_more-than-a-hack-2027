@@ -78,9 +78,12 @@ All training and validation labels come from **Metrica's three public sample gam
   - The opening-window constant (the only frame-relative value) was swept from 3 to 20 minutes of
     video time: the produced submission file is **byte-identical for every value in that range**.
     Its role is structural (the opening kickoff follows the pre-match period), not informational.
-  - On the three sample games, sweeping the rule parameters across
-    [\<SWEEP_RESULTS\>] leaves spellF1 within ±\<X\> of the base model — the rules are
-    insensitive to their constants and never hurt where the base model already obeys the laws.
+  - On the three sample games, the rule's output labels are **identical** for every value swept:
+    minimum prior dead time 15–30 s, centre-spot verification radius 1.5–3.5 m, serving-team hold
+    1.0–2.0 s, opening window 3–7.5 min (the bench scores of identical labels are identical by
+    construction; the rule never changes a frame on the sample games, whose event-derived labels
+    already obey the laws). Only an opening window of 15 min — long enough to swallow ordinary
+    restarts — changes any label, and no value in that neighbourhood was ever considered.
   - The rule changed 2 frames at 2 of the 4 kickoffs it detected in the provided match.
 
 ## 5. Validation
