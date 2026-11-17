@@ -1,6 +1,6 @@
 # Possession labelling with a supervised base model and laws-based corrections
 
-Technical document — More than a Hack 2027, team **\<TEAM_NAME\>**
+Technical document — More than a Hack 2027, team **corsica**
 
 ## 1. Approach
 
